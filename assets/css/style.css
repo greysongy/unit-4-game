@@ -37,12 +37,12 @@ body {
 .candidates {
     position: relative;
     color: gold;
-    top: 50px;
+    top: 25px;
 }
 
 .pics {
     position: relative;
-    top: 100px;
+    top: 0px;
 }
 
 .steph {
@@ -73,8 +73,9 @@ body {
 
 .battlefield {
     position: relative;
-    top: 100px;
+    top: 25px;
     color: white;
+    text-align: center;
 }
 
 .you {
@@ -85,6 +86,14 @@ body {
 .opponent {
     text-align: center;
     color: red;
+}
+
+#you {
+    top: 25px;
+}
+
+#you-text {
+    
 }
 
 /*should probably change player positions to absolute, and then work on better grid in class

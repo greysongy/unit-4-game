@@ -9,6 +9,7 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <title>JQuery Game</title>
 </head>
 
@@ -26,56 +27,70 @@
             <div class="title row d-flex align-items-center justify-content-center"
                 style="font-family: 'Lobster', cursive; text-align: center">
                 <h1>MVP Duel</h1>
+                <div class="col-md-12 d-flex align-items-center justify-content-center">
+                    <button type="button" class="btn btn-primary">Attack</button>
+                </div>
             </div>
             <div class="candidates row d-flex align-items-center justify-content-center"
                 style="font-family: 'Lobster', cursive;">
                 <h2>Candidates</h2>
             </div>
             <div class="row pics" style="font-family: 'Lobster', cursive;">
-                <div class="col md-2 steph">
+                <div class="col md-2 steph pic" id = "assets/images/steph3.jpg" data-name = "Steph" data-color = black>
                     <img src="assets/images/steph3.jpg" alt="steph">
                     <div class="lower-text">
                         <h3>Steph</h3>
                     </div>
                 </div>
-                <div class='col md-2 kawhi'>
+                <div class='col md-2 kawhi pic' id = "assets/images/kawhi2.jpg" data-name = "Kawhi" data-color = red>
                     <img src="assets/images/kawhi2.jpg" alt="kawhi">
                     <h3>Kawhi</h3>
                 </div>
                 <div class="col md-4"></div>
-                <div class="col md-2 lebron">
+                <div class="col md-2 lebron pic" id = "assets/images/lebron.jpg" data-name = "LeBron" data-color = purple>
                     <img src="assets/images/lebron.jpg" alt="lebron">
                     <h3>LeBron</h3>
                 </div>
-                <div class="col md-2 kd">
+                <div class="col md-2 kd pic" id = "assets/images/kd.jpg" data-name = "KD" data-color = black>
                     <img src="assets/images/kd.jpg" alt="kd">
-                    <h4>KD</h4>
+                    <h3>KD</h3>
                 </div>
             </div>
             <div class="row battlefield" style="font-family: 'Lobster', cursive;">
-                <div class="col md-3 you">
-                    <h3>You</h3>
+                <div class="col md-1 you">
+                    <!-- <h3>You</h3> -->
                 </div>
-                <div class="col-md-6 " style="font-family: 'Lobster', cursive;">
+                <div class="col-md-10 " style="font-family: 'Lobster', cursive;">
                     <div class="row">
                         <div class="col-md-6">
-                            <h3>HP</h3>
-                            <h3>Attack Power</h3>
-                            <h3>Counter Attack Power</h3>
+                            <h3>T-S %: </h3>
+                            <h3>D-Rtg: </h3>
+                            <img src ="" id = "you">
+                            <h3 id = "you-text"></h3>
+                            
                         </div>
                         <div class="col-md-6">
-                            <h3>HP</h3>
-                            <h3>Attack Power</h3>
-                            <h3>Counter Attack Power</h3>
+                            <h3>T-S%</h3>
+                            <h3>D-Rtg.</h3>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 opponent">
-                    <h3>Opponent</h3>
+                <div class="col-md-1 opponent">
+                    <!-- <h3>Opponent</h3> -->
                 </div>
             </div>
         </div>
     </div>
+    <script src = "assets/javascript/game.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
