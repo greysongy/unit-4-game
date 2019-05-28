@@ -96,9 +96,16 @@ body {
     
 }
 
-#choosePlayer {
+#choiceOfPlayer {
     top: 50;
     position: absolute;
+}
+
+#choiceOfOpponent {
+    top: 50;
+    position: absolute;
+    right: 0;
+    display: none;
 }
 
 /*should probably change player positions to absolute, and then work on better grid in class

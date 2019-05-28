@@ -26,17 +26,19 @@
             <!-- How to incorporate flexboxes here -->
             <div class="title row d-flex align-items-center justify-content-center"
                 style="font-family: 'Lobster', cursive; text-align: center">
-                <div class = col-md-4>
-                    <div class="alert alert-success" id = "choosePlayer" role="alert"> Choose a Player</div>
+                <div class=col-md-4>
+                    <div class="alert alert-success" id="choiceOfPlayer" role="alert"> Choose a Player</div>
                 </div>
-                <div class = col-md-4>
+                <div class=col-md-4>
                     <h1>MVP Duel</h1>
                 </div>
-                <div class = col-md-4>
-
+                <div class=col-md-4>
+                    <div class="alert alert-success" id="choiceOfOpponent" role="alert"> Choose an Opponent</div>
                 </div>
                 <div class="col-md-12 d-flex align-items-center justify-content-center">
-                    <button type="button" class="btn btn-primary">Attack</button>
+                    <button type="button" class="btn btn-danger mr-2" id="mode" data-value="boring">Boring Mode</button>
+                    <button type="button" class="btn btn-primary" id="gamePlay">Play</button>
+                    <button type="button" class="btn btn-success ml-2" id="mode" data-value="nba">NBA Mode</button>
                 </div>
             </div>
             <div class="candidates row d-flex align-items-center justify-content-center"
@@ -44,24 +46,25 @@
                 <h2>Candidates</h2>
             </div>
             <div class="row pics" style="font-family: 'Lobster', cursive;">
-                <div class="col md-2 steph pic" id = "assets/images/steph3.jpg" data-name = "Steph" data-color = black>
+                <div class="col md-2 steph pic" id="assets/images/steph3.jpg" data-name="Steph" data-color=black
+                    data-index=0>
                     <img src="assets/images/steph3.jpg" alt="steph">
-                    <div class="lower-text">
-                        <h3>Steph</h3>
-                    </div>
+                    <h3 id = "Steph">Steph</h3>
                 </div>
-                <div class='col md-2 kawhi pic' id = "assets/images/kawhi2.jpg" data-name = "Kawhi" data-color = red>
+                <div class='col md-2 kawhi pic' id="assets/images/kawhi2.jpg" data-name="Kawhi" data-color=red
+                    data-index=1>
                     <img src="assets/images/kawhi2.jpg" alt="kawhi">
-                    <h3>Kawhi</h3>
+                    <h3 id = "Kawhi">Kawhi</h3>
                 </div>
                 <div class="col md-4"></div>
-                <div class="col md-2 lebron pic" id = "assets/images/lebron.jpg" data-name = "LeBron" data-color = purple>
+                <div class="col md-2 lebron pic" id="assets/images/lebron.jpg" data-name="LeBron" data-color=purple
+                    data-index=2>
                     <img src="assets/images/lebron.jpg" alt="lebron">
-                    <h3>LeBron</h3>
+                    <h3 id = "LeBron">LeBron</h3>
                 </div>
-                <div class="col md-2 kd pic" id = "assets/images/kd.jpg" data-name = "KD" data-color = black>
+                <div class="col md-2 kd pic" id="assets/images/kd.jpg" data-name="KD" data-color=black data-index=3>
                     <img src="assets/images/kd.jpg" alt="kd">
-                    <h3>KD</h3>
+                    <h3 id = "KD">KD</h3>
                 </div>
             </div>
             <div class="row battlefield" style="font-family: 'Lobster', cursive;">
@@ -73,13 +76,15 @@
                         <div class="col-md-6">
                             <h3>T-S %: </h3>
                             <h3>D-Rtg: </h3>
-                            <img src ="" id = "you">
-                            <h3 id = "you-text"></h3>
-                            
+                            <img src="" id="you">
+                            <h3 id="you-text"></h3>
+
                         </div>
                         <div class="col-md-6">
                             <h3>T-S%</h3>
                             <h3>D-Rtg.</h3>
+                            <img src="" id="opponent">
+                            <h3 id="opponent-text"></h3>
                         </div>
                     </div>
                 </div>
@@ -89,7 +94,7 @@
             </div>
         </div>
     </div>
-    <script src = "assets/javascript/game.js"></script>
+    <script src="assets/javascript/game.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
