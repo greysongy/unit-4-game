@@ -14,7 +14,8 @@ var stephC = {
     counterAttack: 25,
     attack: 20,
     currentAttack: 20,
-    name: "Steph"
+    name: "Steph",
+    validOpponent: true
 }
 
 var kawhiL = {
@@ -23,7 +24,8 @@ var kawhiL = {
     counterAttack: 30,
     attack: 15,
     currentAttack: 15,
-    name: "Kawhi"
+    name: "Kawhi",
+    validOpponent: true
 }
 
 var lebronJ = {
@@ -32,7 +34,8 @@ var lebronJ = {
     counterAttack: 35,
     attack: 10,
     currentAttack: 10,
-    name: "LeBron"
+    name: "LeBron",
+    validOpponent: true
 }
 
 var kevinD = {
@@ -41,7 +44,8 @@ var kevinD = {
     counterAttack: 40,
     attack: 5,
     currentAttack: 5,
-    name: "KD"
+    name: "KD",
+    validOpponent: true
 }
 
 var players = [stephC, kawhiL, lebronJ, kevinD]
@@ -102,6 +106,7 @@ $(".pic").on("click", function () {
             }
             choosePlayer = false;
             chooseOpponent = true;
+            you.validOpponent = false;
             // how to get this to take precedence over for loop
             $("#choiceOfPlayer").hide();
             $("#choiceOfOpponent").show();
@@ -112,19 +117,26 @@ $(".pic").on("click", function () {
             // fadeInAndOut("choiceOfOpponent");
             // you = players[this.getAttribute("data-index")];
         }
+        // console.log("choose opponent: " + this.chooseOpponent + "valid Opponent: " + this.validOpponent);
         else if (chooseOpponent) {
+            console.log("Did we get here");
             opponent = players[this.getAttribute("data-index")];
-            $("#opponent").attr("src", this.id);
-            $("#opponent-text").css('color', this.getAttribute("data-color"));
-            $("#opponent-text").text(this.getAttribute("data-name"));
-            if (classGame) {
-                $("#opponent-text").text(this.getAttribute("data-name") + ": " + opponent.hP);
-                $("#att3").text("Attack Power: " + opponent.attack);
-                $("#att4").text("Counter Attack Power: " + ": " + opponent.counterAttack);
+            if (opponent.validOpponent) {
+                $("#opponent").attr("src", this.id);
+                $("#opponent-text").css('color', this.getAttribute("data-color"));
+                $("#opponent-text").text(this.getAttribute("data-name"));
+                if (classGame) {
+                    $("#opponent-text").text(this.getAttribute("data-name") + ": " + opponent.hP);
+                    $("#att3").text("Attack Power: " + opponent.attack);
+                    $("#att4").text("Counter Attack Power: " + ": " + opponent.counterAttack);
+                }
+                chooseOpponent = false;
+                this.validOpponent = false;
+                $("#choiceOfOpponent").hide();
             }
-            chooseOpponent = false;
-            $("#choiceOfOpponent").hide();
         }
+        console.log(this)
+        console.log("choose opponent: " + chooseOpponent + "valid Opponent: " + this.validOpponent);
     }
 })
 
@@ -143,9 +155,11 @@ $("#gamePlay").on("click", function () {
                     console.log("You Lose");
                 }
                 else if (opponent.currenthP <= 0) {
-                    opponent = null;
                     $("#opponent").attr("src", "");
                     $("#opponent-text").text(this.getAttribute(""));
+                    $("." + opponent.name + "Image").hide();
+                    $("." + opponent.name + "Label").text("");
+                    opponent = null;
                     numOpponents--;
                     if (numOpponents !== 0) {
                         chooseOpponent = true;
