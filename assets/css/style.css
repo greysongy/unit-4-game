@@ -1,0 +1,90 @@
+body {
+    background: url("assets/images/oracleUpdated4.jpg");
+}
+
+/* .container {
+    /* position: relative;
+    height: 100vh; 
+    width: 100vw;  */
+    /* background-color: blue; 
+}
+
+.court {
+    /* background-color: blue; 
+    height: 100vh; 
+    width: 100vw; 
+    /* background-image: url("http://writingexercises.co.uk/random-images.php"); 
+} */
+
+/* body {
+    background: url("assets/images/kd.jpg");
+    background-color: #cccccc;
+   } */
+
+/* how to shrink margin equally on both sides */
+.container {
+    
+}
+
+  .title {
+    color: gold;
+} 
+/*
+.remove-all-margin{
+    margin:0 ! important;
+}*/
+
+.candidates {
+    position: relative;
+    color: gold;
+    top: 50px;
+}
+
+.pics {
+    position: relative;
+    top: 100px;
+}
+
+.steph {
+    color: gold;
+    text-align: center;
+}
+/*
+.pics {
+    position: absolute;
+    top: 200px;
+}
+*/
+
+.kawhi {
+    color: red;
+    text-align: center;
+}
+
+.lebron {
+    color: purple;
+    text-align: center;
+}
+
+.kd {
+    color: gold;
+    text-align: center;
+} 
+
+.battlefield {
+    position: relative;
+    top: 100px;
+    color: white;
+}
+
+.you {
+    text-align: center;
+    color: green;
+}
+
+.opponent {
+    text-align: center;
+    color: red;
+}
+
+/*should probably change player positions to absolute, and then work on better grid in class

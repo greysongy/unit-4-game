@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+    <title>JQuery Game</title>
+</head>
+
+<style>
+    /* Whyis this not working on style.css? */
+    body {
+        background: url("assets/images/oracleUpdated4.jpg");
+    }
+</style>
+
+<body>
+    <div class="container-fluid">
+        <div class="container">
+            <!-- How to incorporate flexboxes here -->
+            <div class="title row d-flex align-items-center justify-content-center"
+                style="font-family: 'Lobster', cursive; text-align: center">
+                <h1>MVP Duel</h1>
+            </div>
+            <div class="candidates row d-flex align-items-center justify-content-center"
+                style="font-family: 'Lobster', cursive;">
+                <h2>Candidates</h2>
+            </div>
+            <div class="row pics" style="font-family: 'Lobster', cursive;">
+                <div class="col md-2 steph">
+                    <img src="assets/images/steph3.jpg" alt="steph">
+                    <div class="lower-text">
+                        <h3>Steph</h3>
+                    </div>
+                </div>
+                <div class='col md-2 kawhi'>
+                    <img src="assets/images/kawhi2.jpg" alt="kawhi">
+                    <h3>Kawhi</h3>
+                </div>
+                <div class="col md-4"></div>
+                <div class="col md-2 lebron">
+                    <img src="assets/images/lebron.jpg" alt="lebron">
+                    <h3>LeBron</h3>
+                </div>
+                <div class="col md-2 kd">
+                    <img src="assets/images/kd.jpg" alt="kd">
+                    <h4>KD</h4>
+                </div>
+            </div>
+            <div class="row battlefield" style="font-family: 'Lobster', cursive;">
+                <div class="col md-3 you">
+                    <h3>You</h3>
+                </div>
+                <div class="col-md-6 " style="font-family: 'Lobster', cursive;">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h3>HP</h3>
+                            <h3>Attack Power</h3>
+                            <h3>Counter Attack Power</h3>
+                        </div>
+                        <div class="col-md-6">
+                            <h3>HP</h3>
+                            <h3>Attack Power</h3>
+                            <h3>Counter Attack Power</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 opponent">
+                    <h3>Opponent</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
