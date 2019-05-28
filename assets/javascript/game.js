@@ -9,41 +9,41 @@ var numOpponents = 3;
 var gameOver = false;
 
 var stephC = {
-    hP: 200,
-    currenthP: 200,
-    counterAttack: 25,
-    attack: 20,
-    currentAttack: 20,
+    hP: 152,
+    currenthP: 152,
+    counterAttack: 11,
+    attack: 9,
+    currentAttack: 9,
     name: "Steph",
     validOpponent: true
 }
 
 var kawhiL = {
-    hP: 175,
-    currenthP: 175,
-    counterAttack: 30,
-    attack: 15,
-    currentAttack: 15,
+    hP: 149,
+    currenthP: 149,
+    counterAttack: 20,
+    attack: 6,
+    currentAttack: 6,
     name: "Kawhi",
     validOpponent: true
 }
 
 var lebronJ = {
-    hP: 150,
-    currenthP: 150,
-    counterAttack: 35,
-    attack: 10,
-    currentAttack: 10,
+    hP: 151,
+    currenthP: 151,
+    counterAttack: 10,
+    attack: 8,
+    currentAttack: 8,
     name: "LeBron",
     validOpponent: true
 }
 
 var kevinD = {
-    hP: 125,
-    currenthP: 125,
-    counterAttack: 40,
-    attack: 5,
-    currentAttack: 5,
+    hP: 150,
+    currenthP: 150,
+    counterAttack: 15,
+    attack: 7,
+    currentAttack: 7,
     name: "KD",
     validOpponent: true
 }
@@ -119,7 +119,7 @@ $(".pic").on("click", function () {
         }
         // console.log("choose opponent: " + this.chooseOpponent + "valid Opponent: " + this.validOpponent);
         else if (chooseOpponent) {
-            console.log("Did we get here");
+            // console.log("Did we get here");
             opponent = players[this.getAttribute("data-index")];
             if (opponent.validOpponent) {
                 $("#opponent").attr("src", this.id);
@@ -135,8 +135,8 @@ $(".pic").on("click", function () {
                 $("#choiceOfOpponent").hide();
             }
         }
-        console.log(this)
-        console.log("choose opponent: " + chooseOpponent + "valid Opponent: " + this.validOpponent);
+        // console.log(this)
+        // console.log("choose opponent: " + chooseOpponent + "valid Opponent: " + this.validOpponent);
     }
 })
 
@@ -152,13 +152,16 @@ $("#gamePlay").on("click", function () {
                 $("#opponent-text").text(opponent.name + ": " + opponent.currenthP);
                 if (you.currenthP <= 0) {
                     gameOver = true;
-                    console.log("You Lose");
+                    $("#leftText").text("You");
+                    $("#rightText").text("Lose");
                 }
                 else if (opponent.currenthP <= 0) {
                     $("#opponent").attr("src", "");
                     $("#opponent-text").text(this.getAttribute(""));
                     $("." + opponent.name + "Image").hide();
                     $("." + opponent.name + "Label").text("");
+                    $("#att3").text("Attack Power:");
+                    $("#att4").text("Counter Attack Power: ");
                     opponent = null;
                     numOpponents--;
                     if (numOpponents !== 0) {
@@ -167,7 +170,8 @@ $("#gamePlay").on("click", function () {
                     }
                     else {
                         gameOver = true;
-                        console.log("You win");
+                        $("#leftText").text("You");
+                        $("#rightText").text("Win");
                     }
                 }
             }

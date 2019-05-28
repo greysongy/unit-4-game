@@ -108,4 +108,12 @@ body {
     display: none;
 }
 
+#leftText {
+    color: red;
+}
+
+#rightText {
+    color: red;
+}
+
 /*should probably change player positions to absolute, and then work on better grid in class
