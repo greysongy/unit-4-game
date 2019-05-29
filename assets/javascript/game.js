@@ -140,6 +140,7 @@ $(".pic").on("click", function () {
             //Why can this not be called from here!!!
             // $("#chooseOpponent").fadeOut();
             // fadeInAndOut("choiceOfOpponent");
+            // $("#choiceOfOpponent").fadeOut();
             // you = players[this.getAttribute("data-index")];
         }
         // console.log("choose opponent: " + this.chooseOpponent + "valid Opponent: " + this.validOpponent);

@@ -1,5 +1,7 @@
 body {
-    background: url("assets/images/oracleUpdated4.jpg");
+    background: url("../images/oracleUpdated4.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 /* .container {

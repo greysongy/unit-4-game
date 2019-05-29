@@ -15,9 +15,9 @@
 
 <style>
     /* Whyis this not working on style.css? */
-    body {
+    /* body {
         background: url("assets/images/oracleUpdated4.jpg");
-    }
+    } */
 </style>
 
 <body>
@@ -36,11 +36,12 @@
                     <div class="alert alert-success" id="choiceOfOpponent" role="alert"> Choose an Opponent</div>
                 </div>
                 <div class="col-md-12 d-flex align-items-center justify-content-center">
-                    <h3 class = "mr-5" id = "leftText"></h3>
-                    <button type="button" class="btn btn-danger mr-2 mode"  data-value="boring">Boring Mode</button>
+                    <h3 class="mr-5" id="leftText"></h3>
+                    <button type="button" class="btn btn-danger mr-2 mode" data-value="boring">Boring Mode</button>
                     <button type="button" class="btn btn-primary" id="gamePlay">Play</button>
                     <button type="button" class="btn btn-success ml-2 mode" data-value="nba">NBA Mode</button>
-                    <h3 class = "ml-5" id = "rightText"></h4>
+                    <h3 class="ml-5" id="rightText">
+                        </h4>
                 </div>
             </div>
             <div class="candidates row d-flex align-items-center justify-content-center"
@@ -50,50 +51,50 @@
             <div class="row pics" style="font-family: 'Lobster', cursive;">
                 <div class="col md-2 Steph pic" id="assets/images/steph3.jpg" data-name="Steph" data-color=black
                     data-index=0>
-                    <img class = "StephImage" src="assets/images/steph3.jpg" alt="steph">
-                    <h3 class = "StephLabel" id = "Steph">Steph</h3>
+                    <img class="StephImage" src="assets/images/steph3.jpg" alt="steph">
+                    <h3 class="StephLabel" id="Steph">Steph</h3>
                 </div>
                 <div class='col md-2 Kawhi pic' id="assets/images/kawhi2.jpg" data-name="Kawhi" data-color=red
                     data-index=1>
-                    <img class = "KawhiImage" src="assets/images/kawhi2.jpg" alt="kawhi">
-                    <h3 class = "KawhiLabel" id = "Kawhi">Kawhi</h3>
+                    <img class="KawhiImage" src="assets/images/kawhi2.jpg" alt="kawhi">
+                    <h3 class="KawhiLabel" id="Kawhi">Kawhi</h3>
                 </div>
                 <div class="col md-4"></div>
                 <div class="col md-2 LeBron pic" id="assets/images/lebron.jpg" data-name="LeBron" data-color=purple
                     data-index=2>
-                    <img class = "LeBronImage" src="assets/images/lebron.jpg" alt="lebron">
-                    <h3 class = "LeBronLabel" id = "LeBron">LeBron</h3>
+                    <img class="LeBronImage" src="assets/images/lebron.jpg" alt="lebron">
+                    <h3 class="LeBronLabel" id="LeBron">LeBron</h3>
                 </div>
                 <div class="col md-2 KD pic" id="assets/images/kd.jpg" data-name="KD" data-color=black data-index=3>
-                    <img class = "KDImage" src="assets/images/kd.jpg" alt="kd">
-                    <h3 class = "KDLabel" id = "KD">KD</h3>
+                    <img class="KDImage" src="assets/images/kd.jpg" alt="kd">
+                    <h3 class="KDLabel" id="KD">KD</h3>
                 </div>
             </div>
             <div class="row battlefield" style="font-family: 'Lobster', cursive;">
                 <div class="col md-1 you">
-                    <h1 id = "youScore">0</h1>
-                    <h1 id = "youMake"></h1>
+                    <h1 id="youScore">0</h1>
+                    <h1 id="youMake"></h1>
                 </div>
                 <div class="col-md-10 " style="font-family: 'Lobster', cursive;">
                     <div class="row">
                         <div class="col-md-6">
-                            <h3 id = "att1">2P %: </h3>
-                            <h3 id = "att2">3P %: </h3>
+                            <h3 id="att1">2P %: </h3>
+                            <h3 id="att2">3P %: </h3>
                             <img src="" id="you">
                             <h3 id="you-text"></h3>
 
                         </div>
                         <div class="col-md-6">
-                            <h3 id = "att3">2P %:</h3>
-                            <h3 id = "att4">3P %:</h3>
+                            <h3 id="att3">2P %:</h3>
+                            <h3 id="att4">3P %:</h3>
                             <img src="" id="opponent">
                             <h3 id="opponent-text"></h3>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-1 opponent">
-                    <h1 id = "oppScore">0</h1>
-                    <h1 id = "theyMake"></h1>
+                    <h1 id="oppScore">0</h1>
+                    <h1 id="theyMake"></h1>
                 </div>
             </div>
         </div>
@@ -108,6 +109,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
 </body>
 
 </html>
