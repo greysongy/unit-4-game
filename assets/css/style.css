@@ -46,7 +46,7 @@ body {
 }
 
 .Steph {
-    color: gold;
+    color: #ffd700;
     text-align: center;
 }
 /*
@@ -116,4 +116,11 @@ body {
     color: red;
 }
 
+#youScore {
+    color: gold;
+}
+
+#oppScore {
+    color: gold;
+}
 /*should probably change player positions to absolute, and then work on better grid in class
