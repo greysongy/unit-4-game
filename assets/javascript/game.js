@@ -104,7 +104,7 @@ function fadeInAndOut(idName) {
 // $("#choiceOfPlayer").fadeOut();
 // $("#choiceOfPlayer").fadeIn();
 
-fadeInAndOut("choiceOfPlayer");
+// fadeInAndOut("choiceOfPlayer");
 console.log(this);
 // fadeInAndOut("choiceOfOpponent");
 
@@ -137,10 +137,12 @@ $(".pic").on("click", function () {
             $("#choiceOfOpponent").show();
             console.log(fadeInAndOut);
             console.log(this);
+            $("#choiceOfPlayer").removeClass("constantFade");
+            $("#choiceOfOpponent").addClass("constantFade");
             //Why can this not be called from here!!!
             // $("#chooseOpponent").fadeOut();
-            // fadeInAndOut("choiceOfOpponent");
-            // $("#choiceOfOpponent").fadeOut();
+            //  fadeInAndOut("choiceOfOpponent");
+             //$("#choiceOfOpponent").fadeOut();
             // you = players[this.getAttribute("data-index")];
         }
         // console.log("choose opponent: " + this.chooseOpponent + "valid Opponent: " + this.validOpponent);
@@ -165,6 +167,7 @@ $(".pic").on("click", function () {
                 chooseOpponent = false;
                 this.validOpponent = false;
                 $("#choiceOfOpponent").hide();
+                // $("#choiceOfOpponent").removeClass("constantFade");
             }
         }
         // console.log(this)
@@ -185,7 +188,9 @@ $("#gamePlay").on("click", function () {
                 if (you.currenthP <= 0) {
                     gameOver = true;
                     $("#leftText").text("You");
+                    $("#leftText").addClass("constantFade");
                     $("#rightText").text("Lose");
+                    $("#rightText").addClass("constantFade");
                 }
                 else if (opponent.currenthP <= 0) {
                     $("#opponent").attr("src", "");
@@ -203,7 +208,9 @@ $("#gamePlay").on("click", function () {
                     else {
                         gameOver = true;
                         $("#leftText").text("You");
+                        $("#leftText").addClass("constantFade");
                         $("#rightText").text("Win");
+                        $("#rightText").addClass("constantFade");
                     }
                 }
             }
@@ -259,26 +266,33 @@ $("#gamePlay").on("click", function () {
                         numOpponents--;
                         if (numOpponents !== 0) {
                             chooseOpponent = true;
+                            you.points = 0;
                             $("#choiceOfOpponent").show();
                         }
                         else {
                             gameOver = true;
                             $("#leftText").text("You");
+                            $("#leftText").addClass("constantFade");
                             $("#rightText").text("Win");
+                            $("#rightText").addClass("constantFade");
+
                         }
                     }
                     else if (you.points < opponent.points) {
                         gameOver = true;
                         $("#leftText").text("You");
+                        $("#leftText").addClass("constantFade");
                         $("#rightText").text("Lose");
+                        $("#rightText").addClass("constantFade");
                     }
 
                     else {
                         gameOver = true;
                         $("#leftText").text("You");
+                        $("#leftText").addClass("constantFade");
                         $("#rightText").text("Tie");
+                        $("#rightText").addClass("constantFade");
                     }
-                    you.points = 0;
                     $("#youScore").text(you.points);
                 }
 

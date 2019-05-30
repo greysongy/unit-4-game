@@ -120,9 +120,24 @@ body {
 
 #youScore {
     color: gold;
+    font-size: 500%;
 }
 
 #oppScore {
     color: gold;
+    font-size: 500%;
 }
-/*should probably change player positions to absolute, and then work on better grid in class
+
+.constantFade {
+    animation-name: myPulse;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+/*should probably change player positions to absolute, and then work on better grid in class*/
+
+@keyframes myPulse {
+    0% { opacity: 1}
+    50% {opacity: 0}
+    100% {opacity: 1}
+}
+
