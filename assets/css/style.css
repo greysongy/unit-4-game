@@ -112,10 +112,12 @@ body {
 
 #leftText {
     color: red;
+    font-size: 300%;
 }
 
 #rightText {
     color: red;
+    font-size: 300%;
 }
 
 #youScore {

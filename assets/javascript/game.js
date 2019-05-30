@@ -88,26 +88,17 @@ function setClassMode() {
 
 resetGame();
 
-// for (var i = 0; i < 100; i++) {
-//     console.log(choosePlayer);
-//     if (choosePlayer === true) {
-//         $("#choosePlayer").fadeIn("slow");
-//         $("#choosePlayer").fadeOut("slow");
-//     }
-// }
-
 function fadeInAndOut(idName) {
     $("#" + idName).fadeOut();
     $("#" + idName).fadeIn();
 }
 
-// $("#choiceOfPlayer").fadeOut();
-// $("#choiceOfPlayer").fadeIn();
-
-// fadeInAndOut("choiceOfPlayer");
-console.log(this);
-// fadeInAndOut("choiceOfOpponent");
-
+function setLeftAndRightText(newString) {
+    $("#leftText").text("You");
+    $("#leftText").addClass("constantFade");
+    $("#rightText").text(newString);
+    $("#rightText").addClass("constantFade");
+}
 
 $(".pic").on("click", function () {
     if (!gameOver) {
@@ -123,7 +114,6 @@ $(".pic").on("click", function () {
                 $("#att2").text("Counter Attack Power: " + you.counterAttack);
             }
             else {
-                console.log("color: " + you.color);
                 $("#youScore").css("color", you.color);
                 $("#youScore").text(0);
                 $("#att1").text("2P %: " + you.twoPer);
@@ -132,22 +122,12 @@ $(".pic").on("click", function () {
             choosePlayer = false;
             chooseOpponent = true;
             you.validOpponent = false;
-            // how to get this to take precedence over for loop
             $("#choiceOfPlayer").hide();
             $("#choiceOfOpponent").show();
-            console.log(fadeInAndOut);
-            console.log(this);
             $("#choiceOfPlayer").removeClass("constantFade");
             $("#choiceOfOpponent").addClass("constantFade");
-            //Why can this not be called from here!!!
-            // $("#chooseOpponent").fadeOut();
-            //  fadeInAndOut("choiceOfOpponent");
-             //$("#choiceOfOpponent").fadeOut();
-            // you = players[this.getAttribute("data-index")];
         }
-        // console.log("choose opponent: " + this.chooseOpponent + "valid Opponent: " + this.validOpponent);
         else if (chooseOpponent) {
-            // console.log("Did we get here");
             opponent = players[this.getAttribute("data-index")];
             if (opponent.validOpponent) {
                 $("#opponent").attr("src", this.id);
@@ -156,7 +136,7 @@ $(".pic").on("click", function () {
                 if (classGame) {
                     $("#opponent-text").text(this.getAttribute("data-name") + ": " + opponent.hP);
                     $("#att3").text("Attack Power: " + opponent.attack);
-                    $("#att4").text("Counter Attack Power: " + ": " + opponent.counterAttack);
+                    $("#att4").text("Counter Attack Power: " + opponent.counterAttack);
                 }
                 else {
                     $("#oppScore").css("color", opponent.color);
@@ -167,11 +147,8 @@ $(".pic").on("click", function () {
                 chooseOpponent = false;
                 this.validOpponent = false;
                 $("#choiceOfOpponent").hide();
-                // $("#choiceOfOpponent").removeClass("constantFade");
             }
         }
-        // console.log(this)
-        // console.log("choose opponent: " + chooseOpponent + "valid Opponent: " + this.validOpponent);
     }
 })
 
@@ -187,10 +164,7 @@ $("#gamePlay").on("click", function () {
                 $("#opponent-text").text(opponent.name + ": " + opponent.currenthP);
                 if (you.currenthP <= 0) {
                     gameOver = true;
-                    $("#leftText").text("You");
-                    $("#leftText").addClass("constantFade");
-                    $("#rightText").text("Lose");
-                    $("#rightText").addClass("constantFade");
+                    setLeftAndRightText("Lose");
                 }
                 else if (opponent.currenthP <= 0) {
                     $("#opponent").attr("src", "");
@@ -207,10 +181,7 @@ $("#gamePlay").on("click", function () {
                     }
                     else {
                         gameOver = true;
-                        $("#leftText").text("You");
-                        $("#leftText").addClass("constantFade");
-                        $("#rightText").text("Win");
-                        $("#rightText").addClass("constantFade");
+                        setLeftAndRightText("Win");
                     }
                 }
             }
@@ -271,27 +242,18 @@ $("#gamePlay").on("click", function () {
                         }
                         else {
                             gameOver = true;
-                            $("#leftText").text("You");
-                            $("#leftText").addClass("constantFade");
-                            $("#rightText").text("Win");
-                            $("#rightText").addClass("constantFade");
+                            setLeftAndRightText("Win");
 
                         }
                     }
                     else if (you.points < opponent.points) {
                         gameOver = true;
-                        $("#leftText").text("You");
-                        $("#leftText").addClass("constantFade");
-                        $("#rightText").text("Lose");
-                        $("#rightText").addClass("constantFade");
+                        setLeftAndRightText("Lose");
                     }
 
                     else {
                         gameOver = true;
-                        $("#leftText").text("You");
-                        $("#leftText").addClass("constantFade");
-                        $("#rightText").text("Tie");
-                        $("#rightText").addClass("constantFade");
+                        setLeftAndRightText("Tie");
                     }
                     $("#youScore").text(you.points);
                 }
@@ -304,9 +266,7 @@ $("#gamePlay").on("click", function () {
 $(".mode").on("click", function () {
     if (!gameOver) {
         if (startGame) {
-            console.log(this.getAttribute("data-value"));
             if (this.getAttribute("data-value") === "nba") {
-                console.log("We should have gotten here");
                 classGame = false;
             }
             else {
