@@ -8,6 +8,7 @@ var opponent;
 var numOpponents = 3;
 var gameOver = false;
 
+//set of player objects
 var stephC = {
     hP: 152,
     currenthP: 152,
@@ -66,6 +67,7 @@ var kevinD = {
 
 var players = [stephC, kawhiL, lebronJ, kevinD]
 
+//series of helper functions thatset particular modes/factor out code
 function resetGame() {
     choosePlayer = true;
     startGame = true;
@@ -100,6 +102,7 @@ function setLeftAndRightText(newString) {
     $("#rightText").addClass("constantFade");
 }
 
+//lengthy conditional logic that deals with clicking on a picture, and correctly setting it as the current player/opponent if necessary
 $(".pic").on("click", function () {
     if (!gameOver) {
         if (choosePlayer) {
@@ -152,6 +155,7 @@ $(".pic").on("click", function () {
     }
 })
 
+//game play with conditionals designed for both modes of play, with lots of additional game logic
 $("#gamePlay").on("click", function () {
     if (!gameOver) {
         if (you !== null && opponent !== null) {
@@ -263,6 +267,7 @@ $("#gamePlay").on("click", function () {
     }
 })
 
+//mode setter that can only be clicked on at the correct time
 $(".mode").on("click", function () {
     if (!gameOver) {
         if (startGame) {
