@@ -1,4 +1,4 @@
-# NBA Duel game
+# NBA Duel Game
 Interactive JQuery/Javascript game
 
 ## Project Description
